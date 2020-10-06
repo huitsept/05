@@ -7,15 +7,12 @@ int main(int argc, char *argv[]) {
 	int i;
 	
 	printf("정수 하나를 입력하시오: ");
-	
 	scanf("%i",&i);
 	
-	if (i>0)
-		printf("양수입니다.\n");
-	else if(i<0)
-		printf("음수 입니다.\n");
-	else  
-		printf("0 입니다.\n");
-		
+	if (i>=0)
+		printf("절댓값은 %i 입니다.\n", i);
+	else 
+		printf("절댓값은 %i 입니다.\n", -i);
+	
 	return 0;
 }

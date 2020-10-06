@@ -5,16 +5,24 @@
 
 int main(int argc, char *argv[]) {
 	int i;
-	int sum;
-	int count;
-
-	printf("자연수  하나를 입력하세요: ");
-	scanf("%d",&i);
+	int answer=59;
+	int trynum=0;
 	
-	for(count=1;count<=i;count++)
+	do
+	{
+		printf("숫자를 하나 입력하세요:");
+		scanf("%i",&i); 
+		trynum++;
+		
+		if(i<answer)
+			printf("정답보다 작습니다.\n\n");
+		else if(i>answer)
+			printf("정답보다 큽니다.\n\n");
 
-		sum+=count;
-	 
-	printf("1부터 입력한 정수의 합은 %d입니다.",sum);
+	}
+	while(i!=answer);
+	
+	printf("정답입니다.\n");
+	printf("시도 횟수: %d",trynum); 
 	return 0;
 }
